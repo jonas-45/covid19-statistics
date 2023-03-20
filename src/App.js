@@ -1,11 +1,20 @@
 import React from 'react';
+import { Routes, Route } from 'react-router';
+import Root from './components/Root';
 import './App.css';
+import Leagues from './pages/Leagues';
+import LeagueDetail from './pages/LeagueDetail';
+import NoMatch from './pages/NoMatch';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Sports Leagues by Country</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<Root />}>
+          <Route index element={<Leagues />} />
+          <Route path='/leaguedetails' element={<LeagueDetail />} />
+          <Route path='*' element={<NoMatch />} />
+      </Route>
+    </Routes>
   );
 }
 

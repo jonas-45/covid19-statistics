@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const LeagueDetail = () => {
-  return (
-    <div>LeagueDetail</div>
-  )
-}
+const LeagueDetail = () => (
+  <div>LeagueDetail</div>
+);
 
-export default LeagueDetail
+export default LeagueDetail;

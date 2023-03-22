@@ -4,45 +4,52 @@ import axios from 'axios';
 
 const url = 'https://disease.sh/v3/covid-19/countries';
 
-export const getCovideStatistics = createAsyncThunk('covid/get-data', async () => {
+export const getCovideStatistics = createAsyncThunk('covid/get-data', async (_, thunkAPI) => {
   try {
     const response = await axios.get(url);
     const stats = await response.data.map((info) => ({
-      id: info.countryInfo._id, // no-underscore-dangle
+      id: info.countryInfo._id,
       updated: info.updated,
       flag: info.countryInfo.flag,
       country: info.country,
-      cases: info.cases,
-      tests: info.tests,
       deaths: info.deaths,
       population: info.population,
-      recovered: info.recovered,
-      active: info.active,
-      critical: info.critical,
     }));
     return stats;
   } catch (error) {
-    return false;
+    return thunkAPI.rejectWithValue(
+      error?.data?.message || 'Cannot fetch data...',
+    );
   }
 });
 
 const initialState = {
   covidStats: [],
-  status: 'idle',
-  error: null,
-  search: '',
+  filtered: [],
 };
 
 const covidSlice = createSlice({
   name: 'covidData',
   initialState,
-  reducers: {},
+  reducers: {
+    searchByCountryName: (state, action) => {
+      const filteredList = state.covidStats.filter((data) => 
+      (data.country.toLowerCase().includes(action.payload.toLowerCase())));
+      console.log('filtered: ', state.covidStats);
+      return {
+        ...state,
+        filtered: action.payload.length > 0 ? filteredList : state.covidStats,
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getCovideStatistics.fulfilled, (state, action) => ({
       ...state,
       covidStats: action.payload,
+      filtered: action.payload,
     }));
   },
 });
 
+export const { searchByCountryName } = covidSlice.actions;
 export default covidSlice.reducer;

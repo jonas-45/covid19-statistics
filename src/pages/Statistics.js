@@ -28,7 +28,7 @@ const Statistics = () => {
               </Card.Subtitle>
               <Card.Subtitle><FontAwesomeIcon icon={faCircleArrowRight} size="2x" /></Card.Subtitle>
             </div>
-            <Card.Text className='mt-3'>
+            <Card.Text className="mt-3">
               Polulation:
               {' '}
               {info.population}

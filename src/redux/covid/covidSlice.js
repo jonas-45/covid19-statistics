@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: 0 */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -7,7 +8,7 @@ export const getCovideStatistics = createAsyncThunk('covid/get-data', async () =
   try {
     const response = await axios.get(url);
     const stats = await response.data.map((info) => ({
-      id: info.countryInfo._id, //no-underscore-dangle
+      id: info.countryInfo._id, // no-underscore-dangle
       updated: info.updated,
       flag: info.countryInfo.flag,
       country: info.country,

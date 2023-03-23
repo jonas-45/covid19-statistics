@@ -22,28 +22,30 @@ const NavBar = () => {
     dispatch(searchByCountryName(searchTerm));
   }, [searchTerm, dispatch]);
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" fixed="top" className="mb-5">
-      <Container fluid>
-        <Navbar.Brand>
-          <img src={logo} alt="logo" className="d-inline-block" style={{ width: '60px' }} />
-          <span>Covid19 Statistics</span>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleCanvas} />
-        <Navbar.Offcanvas show={showCanvas} onHide={handleClose}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Menu</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="d-flex justify-content-between align-items-center flex-grow-1 pe-4">
-              <Form inline>
-                <Form.Control type="text" placeholder="Search" onChange={updateSearchTerm} className="mr-sm-2" />
-              </Form>
-              <NavLink className="navlink" to="/"><FontAwesomeIcon icon={faUserCircle} size="2x" /></NavLink>
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
-      </Container>
-    </Navbar>
+    <div className="mb-5 pt-5">
+      <Navbar collapseOnSelect expand="lg" bg="light" fixed="top">
+        <Container fluid>
+          <Navbar.Brand>
+            <img src={logo} alt="logo" className="d-inline-block" style={{ width: '60px' }} />
+            <span>Covid19 Statistics</span>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleCanvas} />
+          <Navbar.Offcanvas show={showCanvas} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title>Menu</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="d-flex justify-content-between align-items-center flex-grow-1 pe-4">
+                <Form inline>
+                  <Form.Control type="text" placeholder="Search" onChange={updateSearchTerm} className="mr-sm-2" />
+                </Form>
+                <NavLink className="navlink" to="/"><FontAwesomeIcon icon={faUserCircle} size="2x" /></NavLink>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </div>
   );
 };
 

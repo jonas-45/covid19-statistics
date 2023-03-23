@@ -16,69 +16,69 @@ const CovidStatDetails = () => {
         <div className="text-left">
           <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" className="text-primary mb-2" onClick={() => navigate(-1)} style={{ cursor: 'pointer' }} />
         </div>
-        <Card className="text-center bg-light p-3" style={{ width: '40rem' }}>
-          <Card.Img src={detailArr.flag} variant="top" style={{ width: '100%' }} />
+        <Card className="text-center bg-light" style={{ width: '40rem' }}>
+          <Card.Img src={detailArr.flag} className="p-3" variant="top" style={{ width: '100%' }} />
           <Card.Body>
             <Card.Title><h1 className="text-primary">{detailArr.country}</h1></Card.Title>
-            <div className="d-flex flex-wrap gap-5 mt-5">
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+            <div className="d-flex flex-column gap-2 mt-2">
+              <Badge bg="light" className="p-3 fs-6 text-center">
+                <span className="text-dark">
                   Continent:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.continent}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Polulation:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.population}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Critical:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.critical}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Total Cases:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.cases}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Total Deaths:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.deaths}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Cases Today:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.today}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Deaths Today:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.deathstoday}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Active:
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.active}</span>
               </Badge>
-              <Badge bg="success" className="p-2 fs-6 text-center">
-                <span className="text-light">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+                <span className="text-dark">
                   Total Tests:
                   {' '}
                 </span>

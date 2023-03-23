@@ -27,7 +27,7 @@ const Statistics = () => {
           <Card style={{ width: '18rem' }} key={info.id ? info.id : info.country} className="bg-light p-2">
             <Card.Img variant="top" src={info.flag} style={{ width: '100%', height: '50%' }} />
             <Card.Body>
-              <Card.Title className="text-info">{info.country }</Card.Title>
+              <Card.Title className="text-info fs-2">{info.country }</Card.Title>
               <div className="d-flex justify-content-between align-items-center">
                 <Card.Subtitle>
                   Deaths:

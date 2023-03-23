@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 
 const Statistics = () => {
-  const { covidStats, filtered } = useSelector((state) => state.covid);
+  const { covidStats, searchTerm } = useSelector((state) => state.covid);
 
   if (covidStats.length < 1) {
     return (
@@ -16,6 +16,9 @@ const Statistics = () => {
       </div>
     );
   }
+  const filtered = searchTerm === '' ? covidStats : covidStats.filter((stat) => (
+    stat.country.toLowerCase().includes(searchTerm.toLowerCase())
+  ));
   return (
     <div className="d-flex flex-column gap-3">
       <NavBar />

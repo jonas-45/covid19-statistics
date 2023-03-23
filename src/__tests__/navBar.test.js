@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 import PropTypes from 'prop-types';
 import store from '../redux/store';
-import NavBar from '../components/Navbar';
+import NavBar from '../components/NavBar';
 import App from '../App';
 
 function MyFallbackComponent({ error, resetErrorBoundary }) {

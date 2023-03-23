@@ -33,12 +33,12 @@ Covid19 world statistics is a website to show the statistics of the Novel Covid1
  - React
  - Redux
 
-## 🚀 <a name="live-demo">Live Demo</a>
-## 🚀 <a href="https://www.loom.com/share/cb3a5f535a5044f490474949e86348e6">Video Description</a>
-
-- Click on the link below to the live demo of the project
-
-  <a href="#">[Live Demo coming soon]</a>
+## 🚀 Live Demo<a name="live-demo" ></a>
+- Click on the link below for the live demo of the project
+  <a href="https://world-covid-19-stats.onrender.com">Live Demo</a>
+## 🚀 Video Description<a name="live-demo"></a>
+- Click on the link below to view the video description of the project
+  <a href="https://www.loom.com/share/cb3a5f535a5044f490474949e86348e6">Video description link</a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

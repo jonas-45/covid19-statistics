@@ -7,7 +7,7 @@ import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
 
 const CovidStatDetails = () => {
   const { id } = useParams();
-  const statsArray = useSelector((state) => state.covid.filtered);
+  const statsArray = useSelector((state) => state.covid.covidStats);
   const detailArr = statsArray.filter((stat) => parseInt(stat.id, 10) === parseInt(id, 10));
   const navigate = useNavigate();
   return (
@@ -16,7 +16,7 @@ const CovidStatDetails = () => {
         <div className="text-left">
           <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" className="text-primary mb-2" onClick={() => navigate(-1)} style={{ cursor: 'pointer' }} />
         </div>
-        <Card className="text-center bg-light p-3" style={{ width: '45rem' }}>
+        <Card className="text-center bg-light p-3" style={{ width: '40rem' }}>
           <Card.Img src={detailArr[0].flag} variant="top" style={{ width: '100%' }} />
           <Card.Body>
             <Card.Title><h1 className="text-primary">{detailArr[0].country}</h1></Card.Title>

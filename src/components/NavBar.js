@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from 'react-redux';
 import logo from '../images/sports-leagues.png';
-import { searchByCountryName } from '../redux/covid/covidSlice';
+import { updateSearchTerm } from '../redux/covid/covidSlice';
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -15,11 +15,11 @@ const NavBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const handleClose = () => setShowCanvas(false);
   const toggleCanvas = () => setShowCanvas((s) => !s);
-  const updateSearchTerm = (e) => {
+  const updateSearchText = (e) => {
     setSearchTerm(e.target.value);
   };
   useEffect(() => {
-    dispatch(searchByCountryName(searchTerm));
+    dispatch(updateSearchTerm(searchTerm));
   }, [searchTerm, dispatch]);
   return (
     <div className="mb-5 pt-5">
@@ -37,7 +37,7 @@ const NavBar = () => {
             <Offcanvas.Body>
               <Nav className="d-flex justify-content-between align-items-center flex-grow-1 pe-4">
                 <Form inline>
-                  <Form.Control type="text" placeholder="Search" onChange={updateSearchTerm} className="mr-sm-2" />
+                  <Form.Control type="text" placeholder="Search" onChange={updateSearchText} className="mr-sm-2" />
                 </Form>
                 <NavLink className="navlink" to="/"><FontAwesomeIcon icon={faUserCircle} size="2x" /></NavLink>
               </Nav>

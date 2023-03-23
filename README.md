@@ -1,46 +1,138 @@
-# Getting Started with Create React App and Redux
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+  <h3>Covid19 World Statistics</h3>
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📗 Table of Contents
 
-### `npm test`
+- [📖 About the Project](#about-project)
+- [🛠 Built With](#built-with)
+- [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+    - [Key Features](#key-features)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- PROJECT DESCRIPTION -->
 
-### `npm run build`
+# 📖 Covid19 Statistics <a name="about-project"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Covid19 world statistics is a website to show the statistics of the Novel Covid19 virus data from all countries. The application provides real time data from the Open Disease Data API.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Built With <a name="built-with">Build With</a>
+ - React
+ - Redux
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### `npm run eject`
+- Click on the link below to the live demo of the project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  <a href="#">[Live Demo coming soon]</a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💻 Getting Started <a name="getting-started"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To get a local copy up and running, follow these steps.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- [ ] <a href="https://code.visualstudio.com/">Visual studio code</a>: A source code editor.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Clone this repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+$ git clone https://github.com/jonas-45/covid19-statistics.git
+$ cd covid19-statistics
+```
+### Run project
+
+```bash
+$ npm install #To install dependencies for the project
+$ npm run start # this will make webpack watching for your changes in code
+```
+
+### Open page in browser
+```bash
+$ npm start
+```
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Key Features <a name="key-features"></a>
+
+- The project is a single-page application (SPA) built with React and Redux
+- React routing added to navigation menu.
+- Used functional Component.
+- Used state and props.
+- Used react-redux and redux toolkit for state management.
+- Used store, actions and reducers in React.
+- Connect Open Disease Data API using axios to retrieve data.
+- Display covid19 statistics for all countries in homepage.
+- Display details of statistics when a country is selected
+- Added a search feature to allow users filter homepage content
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Wullah Jonas Nuta**
+
+- GitHub: [@jonas-45](https://github.com/jonas-45)
+- Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
+- LinkedIn: [jonas-wullah](https://linkedin.com/in/jonas-wullah)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] Add contact section to get in touch with users
+- [ ] Add a comments section to each country's statistics
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/jonas-45/covid19-statistics/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, give it a thumps up and follow me on Github for more exciting projects
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+-[ ] I would like to thank the entire Microverse community for their unrelenting support and guidance.
+-[ ] This project is based on the original design by <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance.</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+

@@ -33,31 +33,28 @@ export const getCovideStatistics = createAsyncThunk('covid/get-data', async (_, 
 
 const initialState = {
   covidStats: [],
-  filtered: [],
+  searchTerm: '',
 };
 
 const covidSlice = createSlice({
   name: 'covidData',
   initialState,
   reducers: {
-    searchByCountryName: (state, action) => {
-      const filteredList = state.covidStats.filter((data) => (
-        data.country.toLowerCase().includes(action.payload.toLowerCase())
-      ));
-      return {
+    updateSearchTerm: (state, action) => (
+
+      {
         ...state,
-        filtered: action.payload.length > 0 ? filteredList : state.covidStats,
-      };
-    },
+        searchTerm: action.payload,
+      }
+    ),
   },
   extraReducers: (builder) => {
     builder.addCase(getCovideStatistics.fulfilled, (state, action) => ({
       ...state,
       covidStats: action.payload,
-      filtered: action.payload,
     }));
   },
 });
 
-export const { searchByCountryName } = covidSlice.actions;
+export const { updateSearchTerm } = covidSlice.actions;
 export default covidSlice.reducer;

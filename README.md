@@ -125,6 +125,7 @@ If you like this project, give it a thumps up and follow me on Github for more e
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 -[ ] I would like to thank the entire Microverse community for their unrelenting support and guidance.
+
 -[ ] This project is based on the original design by <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa on Behance.</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

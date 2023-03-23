@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
+import PropTypes from 'prop-types';
 import store from '../redux/store';
 import NavBar from '../components/Navbar';
 import App from '../App';
@@ -50,3 +51,9 @@ it('App  page renders correctly', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+MyFallbackComponent.propTypes = {
+  error: PropTypes.string.isRequired,
+  resetErrorBoundary: PropTypes.func.isRequired,
+  message: PropTypes.string.isRequired,
+};

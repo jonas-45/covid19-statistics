@@ -16,7 +16,7 @@ const Statistics = () => {
       </div>
     );
   }
-  const filtered = searchTerm === '' ? covidStats : covidStats.filter((stat) => (
+  const filtered = searchTerm === '' || searchTerm === undefined ? covidStats : covidStats.filter((stat) => (
     stat.country.toLowerCase().includes(searchTerm.toLowerCase())
   ));
   return (
@@ -24,7 +24,7 @@ const Statistics = () => {
       <NavBar />
       <div className="d-flex flex-wrap justify-content-center gap-3 p-3">
         {filtered.map((info) => (
-          <Card style={{ width: '18rem' }} key={info.id} className="bg-light p-2">
+          <Card style={{ width: '18rem' }} key={info.id ? info.id : info.country} className="bg-light p-2">
             <Card.Img variant="top" src={info.flag} style={{ width: '100%', height: '50%' }} />
             <Card.Body>
               <Card.Title className="text-info">{info.country }</Card.Title>

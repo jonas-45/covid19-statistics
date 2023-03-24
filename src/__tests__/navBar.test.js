@@ -53,7 +53,8 @@ it('App  page renders correctly', () => {
 });
 
 MyFallbackComponent.propTypes = {
-  error: PropTypes.string.isRequired,
   resetErrorBoundary: PropTypes.func.isRequired,
-  message: PropTypes.string.isRequired,
+  error: PropTypes.shape({
+    message: PropTypes.string.isRequired
+  })
 };

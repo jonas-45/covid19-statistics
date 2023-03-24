@@ -11,75 +11,75 @@ const CovidStatDetails = () => {
   const detailArr = statsArray.find((stat) => parseInt(stat.id, 10) === parseInt(id, 10));
   const navigate = useNavigate();
   return (
-    <div className="mt-5 pt-5">
+    <div className="mt-5">
       <div className="d-flex flex-row justify-content-center gap-2">
         <div className="text-left">
           <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" className="text-primary mb-2" onClick={() => navigate(-1)} style={{ cursor: 'pointer' }} />
         </div>
-        <Card className="text-center bg-light" style={{ width: '40rem' }}>
+        <Card className="text-center bg-light mb-5" style={{ width: '40rem' }}>
           <Card.Img src={detailArr.flag} className="p-3" variant="top" style={{ width: '100%' }} />
           <Card.Body>
             <Card.Title><h1 className="text-primary">{detailArr.country}</h1></Card.Title>
             <div className="d-flex flex-column gap-2 mt-2">
-              <Badge bg="light" className="p-3 fs-6 text-center">
+              <Badge bg="light" className="p-4 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Continent:
+                  Continent
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.continent}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="white" className="p-4 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Polulation:
+                  Polulation
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.population}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Critical:
+                  Critical
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.critical}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="white" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Total Cases:
+                  Total Cases
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.cases}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Total Deaths:
+                  Total Deaths
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.deaths}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="white" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Cases Today:
+                  Cases Today
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.today}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Deaths Today:
+                  Deaths Today
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.deathstoday}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="white" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Active:
+                  Active
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.active}</span>
               </Badge>
-              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center">
+              <Badge bg="light" className="p-3 fs-6 text-center d-flex justify-content-between align-items-center border border-success">
                 <span className="text-dark">
-                  Total Tests:
+                  Total Tests
                   {' '}
                 </span>
                 <span className="text-info">{detailArr.tests}</span>

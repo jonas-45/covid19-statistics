@@ -16,10 +16,10 @@ const CovidStatDetails = () => {
         <div className="d-flex justify-content-start px-5" style={{ width: '100%' }}>
           <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" className="text-primary mb-2" onClick={() => navigate(-1)} style={{ cursor: 'pointer' }} />
         </div>
-        <Card className="text-center bg-light mb-5 mx-auto" style={{ maxWidth: '40rem' }}>
-          <Card.Img src={detailArr.flag} className="p-3" variant="top" style={{ width: '100%' }} />
+        <Card className="text-center bg-light mb-5 mx-auto" style={{ maxwidth: '70rem', width: '80%' }}>
+          <Card.Img src={detailArr.flag} className="p-3 " variant="top" style={{ width: '100%', height: '30rem' }} />
+          <p className="fs-1 fw-bold px-2 ms-auto text-sm-bottom text-primary" style={{ maxWidth: '20rem' }}>{detailArr.country}</p>
           <Card.Body>
-            <Card.Title><h1 className="text-primary">{detailArr.country}</h1></Card.Title>
             <div className="d-flex flex-column mt-2">
               <Badge bg="light" className="p-4 fs-6 text-center d-flex justify-content-between align-items-center border border-secondary">
                 <span className="text-dark">

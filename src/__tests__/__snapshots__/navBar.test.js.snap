@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App  page renders correctly 1`] = `
+<div
+  className="text-center mt-5 pt-5"
+>
+  <p>
+    Loading data, please wait...
+  </p>
+</div>
+`;
+
+exports[`Navbar page renders correctly 1`] = `
+<div>
+  <h2>
+    Something went wrong:
+  </h2>
+  <p>
+    targetWindow.matchMedia is not a function
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Try again
+  </button>
+</div>
+`;
